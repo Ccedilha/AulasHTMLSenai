@@ -5,10 +5,10 @@ function imprimirNome() {
     let temAcessoRestrito = document.getElementById("temAcessoRestrito").checked;
 
     console.log("======== DADOS DO CRACHÁ VIRTUAL =======");
-    console.log("Nome (String):", nome);
-    console.log("Idade (Number):", idade)
-    console.log("Cargo (String):", cargo)
-    console.log("Acesso restrito (Boolean):", temAcessoRestrito)
+    console.log("Nome (String): ", nome);
+    console.log("Idade (Number): ", idade)
+    console.log("Cargo (String): ", cargo)
+    console.log("Acesso restrito (Boolean): ", temAcessoRestrito)
     console.log("==========================================")
 
     window.alert(

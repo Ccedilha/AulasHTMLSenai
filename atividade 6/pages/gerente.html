@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema - Gerente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body class="container p-5">
@@ -29,21 +29,21 @@
             <br>
             <div class="mb-3">
                 <label class="form-label" for="cargo-funcionario">Digite o cargo do funcionário:</label>
-                <input class="form-control p-3" type="text" id="cargo-funcionario" placeholder="Ex: Desenvolvedor" required>
+                <input class="form-control p-3" type="text" id="cargo-funcionario" placeholder="Ex: Desenvolvedor"
+                    required>
             </div>
             <br>
-            <button
-                type="button"
-                onclick="cadastrarFuncionario()"
-                >
+            <button type="button" onclick="cadastrarFuncionario()">
                 CADASTRAR FUNCIONARIO
             </button>
             <script src="../js/cadastroFuncionario.js"></script>
         </form>
+
+        <section id="lista-funcionarios" style="margin-top: 30px;">
+            <h2>Funcionários Cadastrados:</h2>
+        </section>
     </main>
-     <footer>
-            <a class="mb-3" href="funcionario.html">Ir para a página de funcionários</a>
-        </footer>
+
 </body>
 
 </html>
