@@ -11,6 +11,7 @@
         <h2>Soma</h2>
         <label for="num1">Digite o primeiro número</label>
         <input type="text" id="num1">
+
         <br>
         <label for="num2">Digite o segundo número</label>
         <input type="text" id="num2">
@@ -21,9 +22,19 @@
         <button onclick="multiplicacao()">MULTIPLICAÇÃO</button>
         <button onclick="divisao()">DIVISÃO</button>
         <br>
-
         <p>Seu resultado é: <strong id="resultado"></strong></p>
+        <br>
+        <label for="num3">Digite o valor do produto em dólares (USD)</label>
+        <input type="text" id="num3">
+        <br>
+        <button onclick="impostron2000()">Cálculo importação</button>
+        <br>
+        <p>O valor total será: <strong id="resultadoImposto"></strong></p>
+
     </main>
+    <footer>
+        <button onclick="apagarLocalStorage()">Apagar histórico</button>
+    </footer>
     <script src="js/funcoesMatematicas.js"></script>
 </body>
 </html>
