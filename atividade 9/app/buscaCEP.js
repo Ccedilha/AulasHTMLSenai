@@ -1,17 +1,19 @@
 
 function buscaCEP(){
     let cepDigitado = document.getElementById("cep").value;
-
-    if (cepDigitado === ""){
+    let cepLimpo = cepDigitado.replace(/\D/g, ""); //Remove tudo que nao seja número
+    if (cepLimpo === ""){
+        return;
+    }else if(cepLimpo.length !== 8){ //Se o campo "cep" tiver qualquer quantia de números diferente de 8, o JS volta um alerta e retorna ao começo do código
+        alert("CEP inválido");
         return;
     }
-    let cepLimpo = cepDigitado.replace(/\D/g, "");
     fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`)
     .then(function(resposta){
             return resposta.json();
     })
     .then(function(dados){
-        if(dados.erro || cepDigitado.length < 8 || cepDigitado.length > 9){
+        if(dados.erro){
             alert("CEP não encontrado")
             return;
         }
