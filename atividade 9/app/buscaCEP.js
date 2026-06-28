@@ -1,15 +1,17 @@
+
 function buscaCEP(){
     let cepDigitado = document.getElementById("cep").value;
 
     if (cepDigitado === ""){
         return;
     }
-    fetch("https://viacep.com.br/ws/${cepDigitado}/json/")
-    then(function(resposta){
+    let cepLimpo = cepDigitado.replace(/\D/g, "");
+    fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`)
+    .then(function(resposta){
             return resposta.json();
     })
-    then(function(dados){
-        if(dados.erro){
+    .then(function(dados){
+        if(dados.erro || cepDigitado.length < 8 || cepDigitado.length > 9){
             alert("CEP não encontrado")
             return;
         }
